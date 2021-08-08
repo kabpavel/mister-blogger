@@ -1,0 +1,591 @@
+* {
+    box-sizing: border-box;
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: eurofurenceregular;
+    src: url(../fonts/Eurofurenceregular/eurof55.ttf);
+}
+
+@font-face {
+    font-family: lato;
+    src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+
+/* BASE */
+
+html {
+    color: #606060;
+    font-family: lato, serif;
+    line-height: 1.25;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    text-decoration: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+p {
+    font-family: lato, serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-weight: 700;
+    margin: 0 0 1em;
+    line-height: 1.4;
+}
+
+/* LAYOUT */
+
+.main-layout {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.main-header {
+    height: 130px;
+    color: #ffffff;
+    background-color: #292929;
+}
+
+.main-header>div {
+    height: inherit;
+}
+
+/* logo */
+
+.logo {
+    font-size: 2.5rem;
+    font-family: eurofurenceregular, 'Trebuchet MS';
+    letter-spacing: -.05rem;
+}
+
+.main-header .logo {
+    color: inherit;
+}
+
+.main-footer .logo {
+    color: #292929;
+}
+
+.logo .other-color {
+    color: #58c93a;
+}
+
+/* main nav */
+
+.main-nav {
+    font-weight: bold;
+    letter-spacing: .05rem;
+}
+
+.main-nav li {
+    height: 131px;
+    width: 131px;
+    position: relative;
+}
+
+.main-nav a {
+    color: inherit;
+    transition: 0.5s;
+}
+
+.main-nav a::after {
+    content: '';
+    display: block;
+    height: 6px;
+    background-color: #58c93a;
+    position: absolute;
+    inset-inline-start: 0px;
+    inset-block-end: 0px;
+    width: 0%;
+}
+
+.main-nav a:hover {
+    color: #58c93a;
+}
+
+.main-nav a:hover::after {
+    color: #58c93a;
+    width: 100%;
+}
+
+/* .main-nav li:not(:last-child) {
+    margin-inline-end: 80px;
+} */
+
+/* MAIN CONTENT */
+
+.main-content>* {
+    padding-block-start: 40px;
+    padding-block-end: 40px;
+}
+
+.main-content>*:first-child {
+    padding-block-start: 80px;
+}
+
+.main-content>*:last-child {
+    padding-block-end: 80px;
+}
+
+/* CARD */
+
+.card-image-div {
+    width: 470px;
+    padding-inline-end: 20px;
+}
+
+.card-image {
+    width: 468px;
+}
+
+.card-content-div {
+    width: 470px;
+    padding-inline-start: 20px;
+}
+
+.card-content-div p:last-of-type {
+    flex: 1;
+}
+
+.card-title {
+    color: #4f4e4e;
+    font-size: 1.75em;
+    line-height: 1.0714;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    margin-block-end: 58px;
+    padding: 0px;
+}
+
+.card-text {
+    color: #606060;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: .03em;
+}
+
+.card-button {
+    background-color: #ffffff;
+    border-color: #c2c1c1;
+    font-weight: 700;
+    color: #c2c1c1;
+    padding: 8px 16px;
+    width: 186px;
+    border-style: solid;
+    float: left;
+    border-radius: 25px;
+}
+
+.card-button:hover {
+    border-color: #58c93a;
+    color: #58c93a;
+}
+
+.card-button:hover:after {
+    border-color: #58c93a;
+    color: #58c93a;
+    opacity: 1;
+    right: 10px;
+}
+
+.card-button::after {
+    content: " →";
+    opacity: 0;
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+}
+
+/* pagination */
+
+.pagination {
+    padding: 30px;
+}
+
+.pagination-btn {
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    color: #818181;
+    transition: 0.5s;
+}
+
+.pagination-btn:hover {
+    color: #58c93a;
+    opacity: 1;
+    right: 10px;
+}
+
+/* MAIN FOOTER */
+
+.main-footer {
+    padding-block-start: 80px;
+    padding-block-end: 80px;
+    background-color: #f8f8f8;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e1e0e0;
+}
+
+.social-nav>* {
+    height: 40px;
+    width: 40px;
+    background-color: #e5e5e5;
+    /* position: relative; */
+    margin: 0 10px;
+}
+
+.social-nav .facebook:hover {
+    background-color: rgb(71, 99, 170);
+}
+
+.social-nav .twitter:hover {
+    background-color: rgb(69, 152, 230);
+}
+
+.social-nav .blogger:hover {
+    background-color: rgb(76, 116, 184);
+}
+
+.social-nav .dribbble:hover {
+    background-color: rgb(221, 92, 138);
+}
+
+/* HELPERS */
+
+.flex {
+    display: flex;
+}
+
+.flex.space-between {
+    justify-content: space-between;
+}
+
+.flex.align-center {
+    align-items: center;
+}
+
+.flex.justify-center {
+    justify-content: center;
+}
+
+.flex.flex-row {
+    flex-direction: row;
+}
+
+.flex.align-stretch {
+    align-items: stretch;
+}
+
+.flex.flex-column {
+    flex-direction: column;
+}
+
+.flex.justify-space-between {
+    justify-content: space-between;
+}
+
+.flex.justify-space-around {
+    justify-content: space-around;
+}
+
+.border {
+    border-style: none solid solid solid;
+    border-width: 1px;
+    border-color: #e1e0e0;
+}
+
+.clean-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width:740px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
+    /* LAYOUT */
+    .main-layout {
+        max-width: 419.572px;
+        margin: 0 auto;
+    }
+    /* MAIN CONTENT */
+    .main-content>* {
+        padding-block-start: 17.1px;
+        padding-block-end: 17.1px;
+    }
+    .main-content>*:first-child {
+        padding-block-start: 34.2px;
+    }
+    .main-content>*:last-child {
+        padding-block-end: 34.2px;
+    }
+    /* CARD */
+    .card-image-div {
+        width: 418px;
+        padding-inline-start: 8.55px;
+        padding-inline-end: 8.55px;
+    }
+    .card-image {
+        width: 392.516px;
+    }
+    .card-content-div {
+        width: 418px;
+        padding-inline-start: 8.55px;
+        padding-inline-end: 8.55px;
+    }
+    .card-title {
+        font-size: 1.041075em;
+        letter-spacing: .01785em;
+        margin-block-end: 24.795px;
+    }
+    .card-text {
+        line-height: 1.25;
+        letter-spacing: .128em;
+    }
+    .card-button {
+        padding: 3.42px 6.84px;
+        width: 155px;
+        border-radius: 10.6875px;
+    }
+    .card-button:hover:after {
+        right: 4.275px;
+    }
+    .card-button::after {
+        top: 5.985px;
+        right: -8.55px;
+    }
+    /* pagination */
+    .pagination {
+        padding: 12.825px;
+    }
+    .pagination-btn {
+        font-size: 0.481rem;
+    }
+    .pagination-btn:hover {
+        right: 4.275px;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+
+        min-width:max-content;
+        background-color: rgb(0 0 0 / 20%);
+        height: 100vh;
+        box-shadow: 0px 0px 0px transparent;
+        transform: translateX(100%);
+        
+        transition: transform .6s;
+    }
+    
+    body.menu-open .main-nav {
+        transform: translateX(0);
+        box-shadow: -8px 0px 20px rgb(0 0 0 / 20%);
+    }
+
+    .screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /* display: none; */
+        /* background-color: rgba(0, 0, 0, .5); */
+        background-color: rgb(0 0 0 / 50%);
+        cursor: pointer;
+        opacity: 0;
+
+        pointer-events: none;
+        
+        transition: opacity .6s;
+    }
+    
+    body.menu-open .screen {
+        /* display: block; */
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+@media (min-width:740px) {
+    /* LAYOUT */
+    .main-layout {
+        max-width: 581px;
+    }
+    /* MAIN CONTENT */
+    .main-content>* {
+        padding-block-start: 23.796px;
+        padding-block-end: 23.796px;
+    }
+    .main-content>*:first-child {
+        padding-block-start: 47.592px;
+    }
+    .main-content>*:last-child {
+        padding-block-end: 47.592px;
+    }
+    /* CARD */
+    .card-image-div {
+        width: 279.603px;
+        padding-inline-end: 11.898px;
+    }
+    .card-image {
+        width: 278.413px;
+    }
+    .card-content-div {
+        width: 279.603px;
+        padding-inline-start: 11.898px;
+    }
+    .card-title {
+        font-size: 1.041075em;
+        letter-spacing: .01785em;
+        margin-block-end: 34.5042px;
+    }
+    .card-text {
+        letter-spacing: .01785em;
+        font-size: 0.5949rem;
+    }
+    .card-button {
+        padding: 4.759px 9.5184px;
+        width: 155px;
+        border-radius: 14.872px;
+        font-size: 13px;
+    }
+    .card-button:hover:after {
+        right: 5.949px;
+    }
+    .card-button::after {
+        top: 8.329px;
+        right: -11.898px;
+    }
+    /* pagination */
+    .pagination {
+        padding: 17.847px;
+    }
+    .pagination-btn {
+        font-size: 0.669rem;
+    }
+    .pagination-btn:hover {
+        right: 5.949px;
+    }
+    
+    .btn-menu-toggle {
+        display: none;
+    }
+}
+
+@media (min-width:960px) {
+    /* LAYOUT */
+    .main-layout {
+        max-width: 980px;
+        margin: 0 auto;
+    }
+    /* HEADER */
+    .main-header {
+        height: 130px;
+    }
+    .main-header>div {
+        height: inherit;
+    }
+    /* logo */
+    .logo {
+        font-size: 2.5rem;
+        letter-spacing: -.05rem;
+    }
+    /* main nav */
+    .main-nav {
+        letter-spacing: .05rem;
+    }
+    .main-nav li {
+        height: 131px;
+        width: 131px;
+    }
+    .main-nav a::after {
+        height: 6px;
+    }
+    /* MAIN CONTENT */
+    .main-content>* {
+        padding-block-start: 40px;
+        padding-block-end: 40px;
+    }
+    .main-content>*:first-child {
+        padding-block-start: 80px;
+    }
+    .main-content>*:last-child {
+        padding-block-end: 80px;
+    }
+    /* CARD */
+    .card-image-div {
+        width: 470px;
+        padding-inline-end: 20px;
+    }
+    .card-image {
+        width: 468px;
+    }
+    .card-content-div {
+        width: 470px;
+        padding-inline-start: 20px;
+    }
+    .card-title {
+        font-size: 1.75em;
+        line-height: 1.0714;
+        letter-spacing: .03em;
+        margin-block-end: 58px;
+    }
+    .card-text {
+        line-height: 1.25;
+        letter-spacing: .03em;
+    }
+    .card-button {
+        padding: 8px 16px;
+        width: 186px;
+        border-radius: 25px;
+    }
+    .card-button:hover:after {
+        right: 10px;
+    }
+    .card-button::after {
+        top: 14px;
+        right: -20px;
+    }
+    /* pagination */
+    .pagination {
+        padding: 30px;
+    }
+    .pagination-btn {
+        font-size: 1.125rem;
+    }
+    .pagination-btn:hover {
+        right: 10px;
+    }
+    /* MAIN FOOTER */
+    .main-footer {
+        padding-block-start: 80px;
+        padding-block-end: 80px;
+    }
+}
